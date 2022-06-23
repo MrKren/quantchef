@@ -18,7 +18,7 @@ run in docker; so in order to develop you must have the correct software install
 
 2. Download and install [GO](https://go.dev/doc/install)
 
-3. Download and install [nodejs](https://nodejs.org/en/download/) (Or use install 
+3. Download and install [nodejs](https://nodejs.org/en/download/) (Or install and use 
 [NVM](https://github.com/nvm-sh/nvm#installing-and-updating))
 
 4. Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)

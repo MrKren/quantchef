@@ -168,4 +168,4 @@ dist
 
 # project specfic ignores
 vendor
-src/src
+src/quantchef
