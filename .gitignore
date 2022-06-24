@@ -168,4 +168,5 @@ dist
 
 # project specfic ignores
 vendor
-src/quantchef
+src/src
+frontend/build

@@ -11,4 +11,4 @@ WORKDIR /app
 COPY . ./app
 WORKDIR /app/src
 
-CMD ["bee", "run", "quantchef"]
+CMD ["bee", "run"]

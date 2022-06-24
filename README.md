@@ -32,3 +32,7 @@ To build the docker image used for development:
 To start the server on http://localhost:8080
 
 `make up`
+
+To start the frontend in dev mode (for auto-reload on frontend changes etc.):
+
+`make watch`
