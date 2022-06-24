@@ -169,3 +169,4 @@ dist
 # project specfic ignores
 vendor
 src/src
+frontend/build
