@@ -21,8 +21,11 @@ fmt-fe:
 	cd frontend && yarn fmt
 
 lint-be:
-	docker compose run --rm --entrypoint "" app golangci-lint run
+	docker compose run --rm --entrypoint "" app golangci-lint run --enable goimports
+
+fmt-be:
+	docker compose run --rm --entrypoint "" app golangci-lint run --enable goimports --fix
 
 lint: lint-fe lint-be
 
-fmt: fmt-fe
+fmt: fmt-fe fmt-be
