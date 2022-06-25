@@ -33,6 +33,24 @@ To start the server on http://localhost:8080
 
 `make up`
 
-To start the frontend in dev mode (for auto-reload on frontend changes etc.):
+To start the frontend in dev mode (for auto-reload on frontend changes etc.) on http://localhost:3000:
 
 `make watch`
+
+#### Linting
+
+To run linting:
+
+`make lint`
+
+* `make lint-fe` 
+
+* `make lint-be`
+
+To run linting with auto formatting:
+
+`make fmt`
+
+* `make fmt-fe` 
+
+* `make fmt-be`
