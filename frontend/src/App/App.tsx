@@ -32,7 +32,7 @@ function App() {
       </AppBar>
       <Routes>
         <Route path="/" element={<h1>login</h1>} />
-        <Route path="/feed" element={<h1>feed</h1>} />
+        <Route path="/feed" element={<img src="/logo" />} />
         <Route path="/search" element={<h1>search</h1>} />
         <Route path="/post" element={<h1>post</h1>} />
       </Routes>
