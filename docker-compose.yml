@@ -8,3 +8,11 @@ services:
     volumes:
       - ./:/app
     tty: true
+  frontend:
+    image: node:16-bullseye
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+    working_dir: /app/frontend
+    command: yarn start
