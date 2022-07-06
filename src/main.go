@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
@@ -14,6 +14,6 @@ func main() {
 
 	err := router.Run("0.0.0.0:8080")
 	if err != nil {
-		fmt.Print(err)
+		log.Fatalln(err)
 	}
 }
