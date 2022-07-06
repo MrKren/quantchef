@@ -11,9 +11,6 @@ build-be:
 build-fe:
 	cd frontend && yarn build
 
-watch:
-	cd frontend && yarn start
-
 lint-fe:
 	cd frontend && yarn lint
 
