@@ -1,0 +1,40 @@
+{
+    "title": "",
+    "author": "",
+    "ingredients": [
+        {
+            "quantity": 3,
+            "unit": "tbsp",
+            "name": "red pesto"
+        },
+        {
+            "quantity": 250,
+            "unit": "gram",
+            "name": "pasta"
+        },
+        {
+            "quantity": 50,
+            "unit": "gram",
+            "name": "cheese"
+        }
+    ],
+    "instructions": [
+        {
+            "dish": "Pasta",
+            "steps": [
+                "Boil water",
+                "Salt water",
+                "Add uncooked pasta and simmer for 10 minutes",
+                "Drain pasta water"
+            ]
+        },
+        {
+            "dish": "Dish",
+            "steps": [
+                "Add pesto to cooked pasta",
+                "Grate cheese over pesto pasta",
+                "Mix well and serve"
+            ]
+        }
+    ]
+}
