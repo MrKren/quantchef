@@ -1,6 +1,6 @@
 {
-    "title": "",
-    "author": "",
+    "title": "Pesto Pasta",
+    "author": "Kieran",
     "ingredients": [
         {
             "quantity": 3,
@@ -22,18 +22,18 @@
         {
             "dish": "Pasta",
             "steps": [
-                "Boil water",
-                "Salt water",
-                "Add uncooked pasta and simmer for 10 minutes",
-                "Drain pasta water"
+                {"step": "Boil water"},
+                {"step": "Salt water"},
+                {"step": "Add uncooked pasta and simmer for 10 minutes"},
+                {"step": "Drain pasta water"}
             ]
         },
         {
             "dish": "Dish",
             "steps": [
-                "Add pesto to cooked pasta",
-                "Grate cheese over pesto pasta",
-                "Mix well and serve"
+                {"step": "Add pesto to cooked pasta"},
+                {"step": "Grate cheese over pesto pasta"},
+                {"step": "Mix well and serve"}
             ]
         }
     ]
