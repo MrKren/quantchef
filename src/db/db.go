@@ -3,6 +3,7 @@ package db
 import (
 	"log"
 
+	"github.com/MrKren/quantchef/src/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -10,13 +11,15 @@ import (
 func Init() *gorm.DB {
 	// TODO: add environment variable manager for production etc.
 	// db:3306 is the db address on the docker-compose network
-	db_url := "root:root@tcp(db:3306)/test_db"
+	db_url := "root:root@tcp(db:3306)/quantchef_db"
 
 	db, err := gorm.Open(mysql.Open(db_url), &gorm.Config{})
 
 	if err != nil {
 		log.Fatalln(err)
 	}
+
+	db.AutoMigrate(&models.Recipie{})
 
 	return db
 }
