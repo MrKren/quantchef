@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"github.com/MrKren/quantchef/src/db"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 )
@@ -16,4 +17,6 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
+
+	db.Init()
 }
