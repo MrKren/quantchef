@@ -3,21 +3,21 @@ package models
 import "gorm.io/gorm"
 
 type Ingredient struct {
-	gorm.Model
-	Quantity		int				`json:"quantity"`
+	ID				uint			`gorm:"primaryKey"`
+	Quantity		uint			`json:"quantity"`
 	Unit			string			`json:"unit"`
 	Name			string			`json:"name"`
 	RecipieRefer	uint
 }
 
 type Step struct {
-	gorm.Model
+	ID				uint			`gorm:"primaryKey"`
 	Step			string			`json:"step"`
 	StepsRefer		uint
 }
 
 type Dish struct {
-	gorm.Model
+	ID				uint			`gorm:"primaryKey"`
 	Dish			string			`json:"dish"`
 	Steps			[]Step			`gorm:"foreignKey:StepsRefer" json:"steps"`
 	RecipieRefer	uint
