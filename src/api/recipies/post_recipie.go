@@ -9,7 +9,7 @@ import (
 )
 
 func (h handler) PostRecipie(c *gin.Context) {
-	body := models.Recipie{}
+	body := models.RecipieRequestBody{}
 
 	if err := c.BindJSON(&body); err != nil {
 		gin_err := c.AbortWithError(http.StatusBadRequest, err)

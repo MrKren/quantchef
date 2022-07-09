@@ -23,10 +23,14 @@ type Dish struct {
 	RecipieRefer uint
 }
 
-type Recipie struct {
-	gorm.Model
+type RecipieRequestBody struct {
 	Title        string       `json:"title"`
 	Author       string       `json:"author"`
 	Ingredients  []Ingredient `json:"ingredients"  gorm:"foreignKey:RecipieRefer"`
 	Instructions []Dish       `json:"instructions" gorm:"foreignKey:RecipieRefer"`
+}
+
+type Recipie struct {
+	gorm.Model
+	RecipieRequestBody
 }
