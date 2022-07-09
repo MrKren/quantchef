@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/MrKren/quantchef/src/db"
 	"github.com/MrKren/quantchef/src/api/recipies"
+	"github.com/MrKren/quantchef/src/db"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 )

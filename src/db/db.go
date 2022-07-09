@@ -14,15 +14,19 @@ func Init() *gorm.DB {
 	db_url := "root:root@tcp(db:3306)/quantchef"
 
 	db, err := gorm.Open(mysql.Open(db_url), &gorm.Config{})
-
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	db.AutoMigrate(&models.Recipie{})
-	db.AutoMigrate(&models.Ingredient{})
-	db.AutoMigrate(&models.Dish{})
-	db.AutoMigrate(&models.Step{})
+	err = db.AutoMigrate(
+		&models.Recipie{},
+		&models.Ingredient{},
+		&models.Dish{},
+		&models.Step{},
+	)
+	if err != nil {
+		log.Fatalln(err)
+	}
 
 	return db
 }

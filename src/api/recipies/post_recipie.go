@@ -1,6 +1,7 @@
 package recipies
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/MrKren/quantchef/src/models"
@@ -11,7 +12,10 @@ func (h handler) PostRecipie(c *gin.Context) {
 	body := models.Recipie{}
 
 	if err := c.BindJSON(&body); err != nil {
-		c.AbortWithError(http.StatusBadRequest, err)
+		gin_err := c.AbortWithError(http.StatusBadRequest, err)
+		if gin_err != nil {
+			log.Fatalln(gin_err)
+		}
 		return
 	}
 
@@ -22,7 +26,10 @@ func (h handler) PostRecipie(c *gin.Context) {
 	recipie.Instructions = body.Instructions
 
 	if result := h.DB.Create(&recipie); result.Error != nil {
-		c.AbortWithError(http.StatusNotFound, result.Error)
+		gin_err := c.AbortWithError(http.StatusNotFound, result.Error)
+		if gin_err != nil {
+			log.Fatalln(gin_err)
+		}
 		return
 	}
 
