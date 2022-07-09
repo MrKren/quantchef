@@ -1,8 +1,10 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
+	"github.com/MrKren/quantchef/src/api/recipies"
+	"github.com/MrKren/quantchef/src/db"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 )
@@ -12,8 +14,12 @@ func main() {
 	router.Use(static.Serve("/", static.LocalFile("../frontend/build", true)))
 	router.StaticFile("/logo", "../frontend/src/logo.svg")
 
+	h := db.Init()
+
+	recipies.RegisterRoutes(router, h)
+
 	err := router.Run("0.0.0.0:8080")
 	if err != nil {
-		fmt.Print(err)
+		log.Fatalln(err)
 	}
 }

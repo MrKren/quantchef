@@ -8,6 +8,10 @@ services:
     volumes:
       - ./:/app
     tty: true
+    depends_on:
+      db:
+        condition: service_healthy
+
   frontend:
     image: node:16-bullseye
     ports:
@@ -16,3 +20,25 @@ services:
       - ./:/app
     working_dir: /app/frontend
     command: yarn start
+
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=quantchef
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-p$$MYSQL_ROOT_PASSWORD' ]
+      interval: 10s
+      timeout: 10s
+      start_period: 0s
+      retries: 15
+  
+volumes:
+  db-data:
+    driver: local
