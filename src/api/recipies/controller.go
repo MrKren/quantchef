@@ -19,4 +19,5 @@ func RegisterRoutes(router *gin.Engine, db *gorm.DB) {
 	routes.GET("", h.GetRecipies)
 	routes.GET("/:ID", h.GetRecipie)
 	routes.PUT("/:ID", h.UpdateRecipie)
+	routes.DELETE("/:ID", h.DeleteRecipie)
 }
