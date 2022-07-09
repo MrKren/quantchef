@@ -1,0 +1,48 @@
+{
+    "title": "Fajitas",
+    "author": "Kieran",
+    "ingredients": [
+        {
+            "quantity": 4,
+            "unit": "",
+            "name": "Wraps"
+        },
+        {
+            "quantity": 250,
+            "unit": "gram",
+            "name": "Chicken"
+        },
+        {
+            "quantity": 1,
+            "unit": "",
+            "name": "Red Bell Pepper"
+        },
+        {
+            "quantity": 1,
+            "unit": "",
+            "name": "Red Onion"
+        },
+        {
+            "quantity": 1,
+            "unit": "tbsp",
+            "name": "Spice Mix"
+        },
+        {
+            "quantity": 3,
+            "unit": "tbsp",
+            "name": "Olive Oil"
+        }
+    ],
+    "instructions": [
+        {
+            "dish": "Fajitas",
+            "steps": [
+                {"step": "Slice chicken, onion and pepper"},
+                {"step": "Marinade in bowl with spices and oil"},
+                {"step": "Add to hot pan and cook for 15 minutes"},
+                {"step": "Distribute among wraps"},
+                {"step": "Optionally add cheese"}
+            ]
+        }
+    ]
+}
