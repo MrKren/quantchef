@@ -31,3 +31,6 @@ fmt-be:
 lint: lint-fe lint-be
 
 fmt: fmt-fe fmt-be
+
+tests-be:
+	go test ./src/...

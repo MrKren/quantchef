@@ -38,7 +38,21 @@ services:
       timeout: 10s
       start_period: 0s
       retries: 15
+
+  test-db:
+    image: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=quantchef
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+    volumes:
+      - test-db-data:/var/lib/mysql
   
 volumes:
   db-data:
+    driver: local
+  test-db-data:
     driver: local
